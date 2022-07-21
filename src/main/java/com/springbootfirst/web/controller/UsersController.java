@@ -19,7 +19,7 @@ public class UsersController {
     }
 
     @GetMapping()
-    public String showAllUsers(Model model) {
+    public String getAllUsers(Model model) {
         List<User> allUsers = userService.getAllUsers();
         model.addAttribute("allUsers", allUsers);
         return "user-list";
